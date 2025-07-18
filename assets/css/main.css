@@ -3165,7 +3165,7 @@ input, select, textarea {
 
 		@media screen and (max-width: 736px) {
 		#main {
-			padding: 2em 0 4em 0; /* optional: some top padding for small screens */
+			padding: 2em 0 2em 0; /* optional: some top padding for small screens */
 		}
 	}
 
