@@ -2367,6 +2367,10 @@ input, select, textarea {
 			font-size: 0.8em;
 		}
 
+		#header ul.actions .button {
+			min-width: 10em;
+		}
+
 		.mobile-break {
 			display: none;
 		}
