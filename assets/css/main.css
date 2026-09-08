@@ -2367,6 +2367,18 @@ input, select, textarea {
 			font-size: 0.8em;
 		}
 
+		.mobile-break {
+			display: none;
+		}
+
+			@media screen and (max-width: 736px) {
+
+				.mobile-break {
+					display: block;
+				}
+
+			}
+
 		.label {
 			display: table;
 			position: relative;
@@ -2385,6 +2397,10 @@ input, select, textarea {
 		}
 
 			.text-frame .blurb:last-child {
+				margin-bottom: 0;
+			}
+
+			.text-frame > div > .text-frame:last-child {
 				margin-bottom: 0;
 			}
 
