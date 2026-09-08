@@ -2367,6 +2367,27 @@ input, select, textarea {
 			font-size: 0.8em;
 		}
 
+		.label {
+			display: table;
+			position: relative;
+			margin: 0 auto -0.7em auto;
+			background: #ffffff;
+			padding: 0 0.5em;
+			font-weight: bold;
+			color: #f03639;
+		}
+
+		.text-frame {
+			border: 1px solid #f03639;
+			border-radius: 4px;
+			padding: 1em 1.25em;
+			margin: 0 0 1em 0;
+		}
+
+			.text-frame .blurb:last-child {
+				margin-bottom: 0;
+			}
+
 			.image.main img {
 				width: 100%;
 			}
