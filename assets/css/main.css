@@ -2393,6 +2393,14 @@ input, select, textarea {
 			color: #f03639;
 		}
 
+		.sub-label {
+			display: block;
+			text-align: left;
+			margin: 0 0 0.5em 0;
+			font-weight: bold;
+			color: #f03639;
+		}
+
 		.text-frame {
 			border: 1px solid #f03639;
 			border-radius: 4px;
