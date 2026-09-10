@@ -2412,6 +2412,34 @@ input, select, textarea {
 				width: 100%;
 			}
 
+			.more-link-wrap {
+				text-align: center;
+				margin: 0;
+				padding: 1em 0 0.5em 0;
+			}
+
+			.more-link {
+				display: inline-block;
+				font-weight: bold;
+				color: #f03639;
+				animation: more-link-pulse 1.8s ease-in-out infinite;
+			}
+
+				.more-link:hover {
+					animation-play-state: paused;
+				}
+
+			@keyframes more-link-pulse {
+				0%, 100% {
+					transform: scale(1);
+					opacity: 1;
+				}
+				50% {
+					transform: scale(1.08);
+					opacity: 0.75;
+				}
+			}
+
 			@media screen and (max-width: 736px) {
 
 				.image.main {
