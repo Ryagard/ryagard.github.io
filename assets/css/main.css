@@ -2500,21 +2500,24 @@ input, select, textarea {
 				pointer-events: none;
 			}
 
-				.img-compare-handle::after {
-					content: '\2194';
+				.img-compare-handle-icon {
 					position: absolute;
 					top: 50%;
 					left: 50%;
 					width: 2.25em;
 					height: 2.25em;
-					line-height: 2.25em;
 					margin: -1.125em 0 0 -1.125em;
 					border-radius: 100%;
 					background: #f03639;
-					color: #ffffff;
-					font-weight: bold;
-					text-align: center;
+					display: flex;
+					align-items: center;
+					justify-content: center;
 				}
+
+					.img-compare-handle-icon svg {
+						width: 55%;
+						height: 55%;
+					}
 
 			.img-compare-slider {
 				position: absolute;
@@ -2526,6 +2529,7 @@ input, select, textarea {
 				opacity: 0;
 				cursor: ew-resize;
 				z-index: 4;
+				touch-action: none;
 				-webkit-appearance: none;
 				appearance: none;
 			}
