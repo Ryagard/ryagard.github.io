@@ -2582,6 +2582,26 @@ input, select, textarea {
 					border: 0;
 				}
 
+/* Cursor Dither */
+
+	.cursor-dither {
+		position: fixed;
+		inset: 0;
+		pointer-events: none;
+		background-image: radial-gradient(rgba(240, 54, 57, 0.55) 1px, transparent 1.6px);
+		background-size: 16px 16px;
+		-webkit-mask-image: radial-gradient(circle 180px at var(--dither-x, -999px) var(--dither-y, -999px), #000 0%, transparent 70%);
+		mask-image: radial-gradient(circle 180px at var(--dither-x, -999px) var(--dither-y, -999px), #000 0%, transparent 70%);
+	}
+
+		@media (prefers-reduced-motion: reduce), (hover: none), (pointer: coarse) {
+
+			.cursor-dither {
+				display: none;
+			}
+
+		}
+
 /* Table */
 
 	.table-wrapper {
@@ -3040,9 +3060,24 @@ input, select, textarea {
 /* Header */
 
 	#header {
+		position: relative;
 		padding: 1em 0 1em 0 ;
 		background-color: #f03639;
 	}
+
+		#header::after {
+			content: '';
+			position: absolute;
+			left: 0;
+			right: 0;
+			bottom: -64px;
+			height: 64px;
+			background-image: radial-gradient(rgba(240, 54, 57, 0.55) 1px, transparent 1.6px);
+			background-size: 16px 16px;
+			-webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 0, rgba(0, 0, 0, 1) 16px, rgba(0, 0, 0, 0.66) 16px, rgba(0, 0, 0, 0.66) 32px, rgba(0, 0, 0, 0.33) 32px, rgba(0, 0, 0, 0.33) 48px, rgba(0, 0, 0, 0) 48px, rgba(0, 0, 0, 0) 64px);
+			mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 0, rgba(0, 0, 0, 1) 16px, rgba(0, 0, 0, 0.66) 16px, rgba(0, 0, 0, 0.66) 32px, rgba(0, 0, 0, 0.33) 32px, rgba(0, 0, 0, 0.33) 48px, rgba(0, 0, 0, 0) 48px, rgba(0, 0, 0, 0) 64px);
+			pointer-events: none;
+		}
 
 		#header .logo {
 			display: block;
@@ -3379,9 +3414,25 @@ input, select, textarea {
 /* Footer */
 
 	#footer {
+		position: relative;
 		padding: 5em 0 6em 0 ;
 		background-color: #f03639;
 	}
+
+		#footer::before {
+			content: '';
+			position: absolute;
+			left: 0;
+			right: 0;
+			top: -64px;
+			height: 64px;
+			background-image: radial-gradient(rgba(240, 54, 57, 0.55) 1px, transparent 1.6px);
+			background-size: 16px 16px;
+			-webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 0, rgba(0, 0, 0, 1) 16px, rgba(0, 0, 0, 0.66) 16px, rgba(0, 0, 0, 0.66) 32px, rgba(0, 0, 0, 0.33) 32px, rgba(0, 0, 0, 0.33) 48px, rgba(0, 0, 0, 0) 48px, rgba(0, 0, 0, 0) 64px);
+			mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 0, rgba(0, 0, 0, 1) 16px, rgba(0, 0, 0, 0.66) 16px, rgba(0, 0, 0, 0.66) 32px, rgba(0, 0, 0, 0.33) 32px, rgba(0, 0, 0, 0.33) 48px, rgba(0, 0, 0, 0) 48px, rgba(0, 0, 0, 0) 64px);
+			transform: scaleY(-1);
+			pointer-events: none;
+		}
 
 		#footer > .inner {
 			display: -moz-flex;
