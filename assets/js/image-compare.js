@@ -21,11 +21,42 @@
 			'</div>' +
 			'<input type="range" class="img-compare-slider" min="0" max="100" value="50" aria-label="Drag to compare images" />';
 
+		var frame = el.querySelector('.img-compare-frame');
 		var slider = el.querySelector('.img-compare-slider');
-		var update = function () {
-			el.style.setProperty('--pos', slider.value + '%');
+
+		var setPos = function (pct) {
+			pct = Math.max(0, Math.min(100, pct));
+			slider.value = pct;
+			el.style.setProperty('--pos', pct + '%');
 		};
-		slider.addEventListener('input', update);
-		update();
+
+		var setFromClientX = function (clientX) {
+			var rect = frame.getBoundingClientRect();
+			setPos(((clientX - rect.left) / rect.width) * 100);
+		};
+
+		// Drive the drag ourselves from raw pointer position rather than relying
+		// on the browser's native range-slider touch handling, which behaves
+		// inconsistently across iOS/Android/desktop once heavily restyled.
+		var dragging = false;
+
+		slider.addEventListener('pointerdown', function (e) {
+			dragging = true;
+			slider.setPointerCapture(e.pointerId);
+			setFromClientX(e.clientX);
+		});
+		slider.addEventListener('pointermove', function (e) {
+			if (!dragging) return;
+			setFromClientX(e.clientX);
+		});
+		slider.addEventListener('pointerup', function () { dragging = false; });
+		slider.addEventListener('pointercancel', function () { dragging = false; });
+
+		// Keep keyboard arrow-key interaction working too.
+		slider.addEventListener('input', function () {
+			el.style.setProperty('--pos', slider.value + '%');
+		});
+
+		setPos(50);
 	});
 })();
