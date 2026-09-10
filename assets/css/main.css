@@ -2412,6 +2412,14 @@ input, select, textarea {
 				margin-bottom: 0;
 			}
 
+			.section-divider {
+				width: 3em;
+				height: 2px;
+				margin: 2.5em auto 2.5em auto;
+				background: #f03639;
+				border-radius: 2px;
+			}
+
 			.text-frame > div > .text-frame:last-child {
 				margin-bottom: 0;
 			}
