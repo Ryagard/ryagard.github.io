@@ -58,7 +58,7 @@
 								<div class="img-compare" data-before="images/CampaignB.png" data-after="images/CampaignA.png" data-before-alt="Before" data-after-alt="After"></div>
 
 									<p class="blurb"> Awaysis features linear levels, comprised of rooms. A standard level features around 15 rooms with about 20 minutes of play time. I was in charge of creating the pipeline for making these campaign missions, and then delivering the content. Each Room is built of individual building blocks as can be seen in the orange box view above.</p>
-									<p class="blurb"> The approach for awaysis was to build a library of rooms from which we could then quickly assemble levels to meet our fast-paced schedule demands.</p>
+									<p class="blurb"> The approach for Awaysis was to build a library of rooms from which we could then quickly assemble levels to meet our fast-paced schedule demands.</p>
 
 								</div>
 
@@ -66,7 +66,7 @@
 								<div class="text-frame">
 									<div class="img-compare" data-before="images/ArenaB.png" data-after="images/ArenaA.png" data-before-alt="Before" data-after-alt="After"></div>
 									<p class="blurb"> These are fun bite-sized combat arenas for our player on player multiplayer mode.</p>
-									<p class="blurb"> The key to building these maps was instantly testing and iterating, regular play parites allowed us to develop PVP focused maps on the fly.</p>
+									<p class="blurb"> The key to building these maps was instantly testing and iterating, regular play parties allowed us to develop PVP focused maps on the fly.</p>
 
 								</div>
 
@@ -96,8 +96,23 @@
 
 								<p class="label">Tools</p>
 								<div class="text-frame">
-									<p class="blurb">To Aid in the development of Awaysis I was responsible for creating tools that level designers, artists and engineers could use.</p>
+									<p class="blurb">To aid in the development of Awaysis I was responsible for creating tools that level designers, artists and engineers could use.</p>
 									<p class="blurb">Here are a few examples of tools created in Blutility.</p>
+
+									<p class="sub-label">Vignette System</p>
+									<p class="blurb">A rapid development tool I am proud of is the vignette system. Hand placing each asset in a level is both time intensive and can limit replayability with stale environments.</p>
+									<p class="blurb">To this end I created a system where instead of hand placing props we placed spawn containers called vignettes. These vignettes could be categorized by type, size and shape. We would then create corresponding Components, a group of props that would fit the type and be placed within the size and shape limits. The vignette would then choose a random available component at runtime.</p>
+									<p class="blurb">This meant we could start by placing vignettes only at first, and then developing more components further down the line when polish allowed. A single new component would bring variety to every level in the game. Components can also be added according to game progression, seasonal events, DLC etc. making the levels always fresh and expandable.</p>
+
+									<div class="video-embed">
+										<iframe src="https://youtu.be/1xdXikTyyys" title="Angle Tool" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+									</div>
+
+									<p class="sub-label">Spline Camera</p>
+									<p class="blurb">Working closely with our lead engineer, we developed a spline camera system that could function for our 4 player online game. Using a camera track spline and a player track spline we could design complicated, cinematic shots.</p>
+									<div class="video-embed">
+										<iframe src="https://youtu.be/iksRRkJVopw" title="Angle Tool" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+									</div>
 
 									<p class="sub-label">E-Z Folder</p>
 									<p class="blurb"> As per the level bible, outliner foldering was a key element to making our levels. To aid in development I made a custom tool that could automatically clean any level to meet our requirements.</p>
